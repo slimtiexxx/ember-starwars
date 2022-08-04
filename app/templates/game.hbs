@@ -1,0 +1,81 @@
+<Container>
+  <div class='row'>
+    <div class='col'>
+      <LinkTo
+        @route='index'
+        class='btn btn-outline-dark'
+        role='button'
+        aria-pressed='false'
+      >
+        Back to home page.
+      </LinkTo>
+      {{@model.name}}
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col text-center'>
+      <div class='game-category-image'>
+        <img src='{{this.categoryImage}}' alt='Category' />
+      </div>
+    </div>
+  </div>
+  <div class='row mt-5'>
+    <div class='col is-narrow text-center'>
+      {{#if this.gameEnded}}
+        <button
+          class='btn btn-lg btn-dark'
+          type='button'
+          {{on 'click' this.playAgain}}
+        >
+          Play again!
+        </button>
+      {{else}}
+        <button
+          class='btn btn-lg btn-dark'
+          type='button'
+          {{on 'click' this.challengePlayers}}
+        >
+          FIGHT
+        </button>
+      {{/if}}
+    </div>
+  </div>
+  {{#if this.winner}}
+    <div class='row'>
+      <div class='col'>
+        <h1 class='text-center mt-4'>
+          The winner is:
+          <strong>{{this.winner}}</strong>!
+        </h1>
+      </div>
+    </div>
+  {{/if}}
+  {{#if this.draw}}
+    <div class='row'>
+      <div class='col'>
+        <h1 class='text-center mt-4'>
+          Its a
+          <strong>DRAW</strong>
+        </h1>
+      </div>
+    </div>
+  {{/if}}
+  <div class='row mt-5 align-items-center justify-content-center'>
+    <div class='col'>
+      <PlayerCard
+        @player={{@model.playerOne}}
+        @name='Player One'
+        @score={{this.scoreCounterService.playerOne}}
+        @type={{@model.namespace}}
+      />
+    </div>
+    <div class='col'>
+      <PlayerCard
+        @player={{@model.playerTwo}}
+        @name='Player Two'
+        @score={{this.scoreCounterService.playerTwo}}
+        @type={{@model.namespace}}
+      />
+    </div>
+  </div>
+</Container>

@@ -1,0 +1,21 @@
+name: Name
+model: Modal
+manufacturer: Manufacturer
+cost_in_credits: Cost in Credits
+length: Length
+max_atmosphering_speed: Max Atmosphering Speed
+crew: Crew
+passengers: Passengers
+cargo_capacity: Cargo Capacity
+consumables: Consumables
+hyperdrive_rating: Hyperdrive Rating
+MGLT: MGLT
+starship_class: Starship Class
+height: Height
+mass: Mass
+hair_color: Hair Color
+skin_color: Skin Color
+eye_color: Eye Color
+birth_year: Birth Year
+gender: Gender
+homeworld: Home World

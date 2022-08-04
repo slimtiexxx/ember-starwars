@@ -1,0 +1,41 @@
+<Container class='text-center'>
+  <div class='text-center'>
+    <h1>Welcome to Star Wars battleground!</h1>
+    <hr />
+    <p>
+      In this game you will fight with iconic starships or characters from Star
+      Wars.
+    </p>
+    <h5>Are you ready?</h5>
+    <hr />
+    <p>
+      <small>You can choose which cast you wanna play with.</small>
+    </p>
+    <div class='btn-group rounded mt-5' role='group' aria-label='Basic example'>
+      <LinkTo
+        @route='game'
+        @model='starship'
+        class='btn icon-button btn-dark btn-lg'
+        aria-pressed='false'
+      >
+        <img src='/images/space-ship.png' alt='Starship' />
+      </LinkTo>
+      <LinkTo
+        @route='game'
+        @model='people'
+        class='btn icon-button btn-dark btn-lg'
+        aria-pressed='false'
+      >
+        <img src='/images/darth-vader.png' alt='People' />
+      </LinkTo>
+      <LinkTo
+        @route='game'
+        @model='random'
+        class='btn icon-button btn-dark btn-lg'
+        aria-pressed='false'
+      >
+        <img src='/images/random.png' alt='Random' />
+      </LinkTo>
+    </div>
+  </div>
+</Container>
